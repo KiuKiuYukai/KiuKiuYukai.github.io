@@ -42,6 +42,22 @@
   z-index: 2;
 }
 
+#skip{
+  display: none;
+  position: absolute;
+  color: brown;
+  width: 10%;
+  top: 2vw;
+  left: 87vw;
+  z-index: 2;
+  font-size: 4vw;
+}
+
+#skip :hover{
+  color:cornsilk;
+  transform: scale(1.2);
+}
+
 .line , .line2{
   font-family: "Zen Kurenaido", sans-serif;
   position:relative;
