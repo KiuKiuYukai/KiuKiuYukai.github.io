@@ -2,7 +2,7 @@
 
 html , body{
     font-family: 'Segoe Script','MS P明朝','MS PMincho',sans-serif;
-    background-image: url("KiuKiuYukai.github.io/assets/img/Sahara-Beige.png");
+    background-image: url("../img/Sahara-Beige.png");
     background-size: cover;
     height:100%;
 }
