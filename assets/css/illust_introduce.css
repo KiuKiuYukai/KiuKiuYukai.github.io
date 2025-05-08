@@ -2,7 +2,7 @@
 
 html , body{
     font-family: 'Segoe Script','MS P明朝','MS PMincho',sans-serif;
-    background-image: url("C:/Users/yuhki/Downloads/kiu-site/assets/img/Sahara-Beige.jpg");
+    background-image: url("assets/img/Sahara-Beige.png");
     background-size: cover;
     height:100%;
 }
