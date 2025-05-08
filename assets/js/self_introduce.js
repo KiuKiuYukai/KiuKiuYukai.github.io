@@ -2,11 +2,13 @@ let time = 0;
 let i = 0;
 let startTime;
 let stTime;
+let anime;
 const ido = 25; //ペンの移動スピード、小さければ小さいほど速い
 let rect = new Array(200);
 const tx = document.getElementById("ziko");
 const tx2 = document.getElementById("naiyou");
 const pen =  document.getElementById("pen");
+const skip =  document.getElementById("skip");
 const menu = document.getElementById('menu');
 const sideBar = document.getElementById('sideBar');
 const link = document.getElementsByClassName('Link');
@@ -22,9 +24,8 @@ function txtSplit(txtElemAry) {
       item.innerHTML = txt // HTMLの内容を変更
     })
   }
-  function addCss(txtElemAry , defaultTime) {
+  function addCss(txtElemAry , defaultTime , animeTime) {
     let aryNumner = 0; // 配列の番号(初期値0)
-    const animeTime = 16.265 * ido / 1000; //表示にかかる時間
     txtElemAry.forEach( item => {
       [...item.children].forEach( item2 => {
         aryNumner++;
@@ -35,10 +36,21 @@ function txtSplit(txtElemAry) {
     })
   }
 
+  skip.addEventListener('click', (event) => {
+    skip.style.display = 'none';
+    pen.style.display = 'none';
+    let txtElemAry = document.querySelectorAll('.line');
+    addCss(txtElemAry , 0 , 0);
+    txtElemAry = document.querySelectorAll('.line2');
+    addCss(txtElemAry , 0 , 0);
+    time = -1;
+  });
+
   window.onload = () =>
     {
       startTime = new Date();
       sideBar.style.width = 0 + "%";
+      anime = 16.265 * ido / 1000; //表示にかかる時間
     }
 
   async function draw()
@@ -46,14 +58,15 @@ function txtSplit(txtElemAry) {
     if(new Date() - startTime >= 12557 && new Date() - startTime <= 12576)
       {
         let txtElemAry = document.querySelectorAll('.line');
+        skip.style.display = 'block';
         txtSplit(txtElemAry);
-        addCss(txtElemAry , 0);
+        addCss(txtElemAry , 0 , anime);
         setTimeout(function(){
           tx.style.opacity = 0.8;
           pen.classList.add("fade");
           let txtElemAry = document.querySelectorAll('.line2');
           txtSplit(txtElemAry);
-          addCss(txtElemAry , 1.26);
+          addCss(txtElemAry , 1.26 , anime);
         } ,1);
         setTimeout(function(){
          
