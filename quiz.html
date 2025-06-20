@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset ="utf-8">
+        <meta http-equiv ="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+        <title>クイズ</title>
+        <link rel ="shortcut icon" href="assets/img/icon.png">
+        <link rel ="apple-touch-icon" href="assets/img/icon.png">
+        <link rel ="stylesheet" href="assets/css/reset.css">
+        <link rel ="stylesheet" href="assets/css/common.css">
+        <link rel ="stylesheet" href="assets/css/quiz.css">
+    </head>
+    <body>
+        <div id = "loadScene">
+            <div class="breeding-rhombus-spinner">
+                <div class="rhombus child-1"></div>
+                <div class="rhombus child-2"></div>
+                <div class="rhombus child-3"></div>
+                <div class="rhombus child-4"></div>
+                <div class="rhombus child-5"></div>
+                <div class="rhombus child-6"></div>
+                <div class="rhombus child-7"></div>
+                <div class="rhombus child-8"></div>
+                <div class="rhombus big"></div>
+            </div>
+        </div>
+        <img id = "title_scene" src = "assets/img/名称未設定のデザイン (4).png">
+        <div id = "titles">
+            <div id = "title">
+                <img src = "assets/img/自己紹介 (2).png">
+                <div id = "select_text">＊問題の種類を選択してください＊</div>
+                <div id = "selects">
+                    <button type="button" class="button" id = "left" onclick="left()">←</button>
+                    <div id = "modes">
+                        <p id = "mode"></p>
+                    </div>
+                    <button type="button" class = "button" id = "right" onclick="right()">→</button>
+                </div>
+                <span id="startButton">&raquo;  すたーと  &laquo;</span>
+            </div>
+        </div>
+        <div id="zentai">
+            <img id = "seihu">
+            <div id = "hint_check">
+                 <input type="checkbox" id = "hint_checkbox">ヒントを表示
+            </div>  
+            <div class = "quiz" id = "question">
+                <div id = "question_contents">
+                        <h4 class="mozi">・問題・</h4>
+                        <h4 id = "question_text" class="mozi"></h4>
+                        <div id = "hint_box">
+                            <h4>・ヒント・</h4>
+                            <h4 id = "hint"></h4>
+                        </div>
+                </div>
+            </div>
+            <div id = "answers">
+                <div class="quiz answer" id = "answer1">
+                     <div id = "answer_content">
+                        <h4 class="mozi">A:</h4>
+                        <h4 id="answer_text1" class="mozi"></h4>
+                     </div>
+                </div>
+                <div class="quiz answer" id = "answer2">
+                    <div id = "answer_content">
+                        <h4 class="mozi">B:</h4>
+                        <h4 id="answer_text2" class="mozi"></h4>
+                     </div>
+                </div>
+                <div class="quiz answer" id = "answer3">
+                    <div id = "answer_content">
+                        <h4 class="mozi">C:</h4>
+                        <h4 id="answer_text3" class="mozi"></h4>
+                     </div>
+                </div>
+                <div class="quiz answer" id = "answer4">
+                    <div id = "answer_content">
+                        <h4 class="mozi">D:</h4>
+                        <h4 id="answer_text4" class="mozi"></h4>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/img/26297099.png" id = "menu">
+        <div id = "sideBar">
+            <a href="index.html" id = "Link1" class="Link">ホームに戻る<br></a>
+            <a href="self_introduce.html" id = "Link2" class="Link">自己紹介<br></a>
+            <a href="illust_introduce.html" id = "Link3" class="Link">描いたイラスト<br></a>
+            <a href="" id = "Link4" class="Link">制作したゲーム<br></a>
+        </div>
+        <script src="assets/js/common.js" defer></script> 
+        <script src="assets/js/quiz.js" defer></script>     
+    </body>
+</html>
