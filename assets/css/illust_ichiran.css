@@ -6,11 +6,58 @@ html , body{
     height:100%;
 }
 
+#midasi{
+    position: relative;
+    text-align: center;
+    color: rgb(69, 19, 19);
+    text-decoration: underline solid brown 5px;
+    font-size: 7vw;
+    padding-top: 3vw;
+}
+
+#images{
+    position: relative;
+    text-align: center;
+    padding-top: 2vw;
+}
+
+#image{
+    position: relative;
+    object-fit: contain;
+    width: 25vw;
+    height: 25vw;
+    margin: 1vw;
+}
+
+#data{
+    position: relative;
+    font-size: 2vw;
+    text-decoration: underline;
+}
+
+#comment{
+    margin-top: 2vw;
+    position: relative;
+    font-size: 2vw;
+}
+
 #content_area{
-    position: absolute;
-    top: 20vw;
+    text-align: left;
+    position: relative;
+    padding-top: 2vw;
     width: 100vw;
-    height: 100vw;
+}
+
+#modoru{
+    position: fixed;
+    width: 8vw;
+    top: 1.5vw;
+    left: 90vw;
+    z-index: 6;
+    transition: 0.2s;
+}
+#modoru:hover{
+    transform: scale(1.05);
 }
 
 .gazo{
@@ -18,57 +65,10 @@ html , body{
     object-fit: contain;
     width: 10vw;
     height: 10vw;
+    margin: 1vw;
 }
 
-#menu{
-    position: fixed;
-    width: 8vw;
-    opacity: 0.75;
-    top: 1.5vw;
-    left: 2vw;
-    z-index: 6;
+.gazo:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.1);
 }
-#sideBar{
-    position: fixed;
-    width: 0%;
-    top: 0%;
-    left: 0%;
-    height: 100vh;
-    background-color: white;
-    z-index: 5;
-  
-}
-.Link{
-    display: none;
-    position: relative;
-    left: 1vw;
-    text-decoration-line: none;
-    font-size: 2vw;
-    color: black;
-}
-#hoLink{
-    top: 8vw;
-}
-
-#seLink{
-   top: 12vw;
-}
-
-#geLink{
-    top: 16vw;
-}
-
-.menuOpen{
-    animation: menuOpen 1.0s ease 0.0s 1 normal;
-}
-.menuClose{
-    animation: menuClose 1.0s ease 0.0s 1 normal;
-}
-@keyframes menuOpen {
-    0% {width: 0%;}
-    100% {width: 20%;}
-  }
-  @keyframes menuClose {
-    0% {width: 20%;}
-    100% {width: 0%;}
-  }
