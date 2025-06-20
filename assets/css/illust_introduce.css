@@ -7,104 +7,146 @@ html , body{
     height:100%;
 }
 
-#illust{
+#illust{ /*イラスト全体*/
     position:relative;
     width:100%;
     height:100%;
     display: flex;
-    justify-content: center;
-}
-
-#picture{
-    background-color: darkgray;
-    position: absolute;
-    width: 43.2vw;
-    height: 43.2vw;
-    top: 32vw;
-    object-fit: contain;
-    z-index: 1;
-}
-
-#flame{
-    top: 7vw;
-    width: 60%;
-    position: absolute;
-    z-index: 2;
-}
-
-#gakubuti{
-    position: absolute;
-    width: 50%;
-    top:29vw;
-    z-index: 2;
-}
-
-#ka-ten{
-    position: absolute;
-    top: 27vw;
-    width: 70%;
-    z-index: 3;
-}
-#data{
-    position: absolute;
-    top: 79vw;
-    font-size: 2vw;
-    text-decoration: underline;
-}
-#comment{
-    position: absolute;
-    top:82vw;
-    font-size: 2vw;
-}
-
-.ichiran_btn {
-    position: absolute;
-    top: 85vw;
-    border-radius: 2vw;
-    display: inline-block;
-    width: 15vw;
-    line-height: 3vw;
+    flex-direction: column;
     text-align: center;
-    text-decoration: none;
-    color:cornsilk;
-    background-color:brown;
-  }
-  .ichiran_btn a {
-    font-size: 1.5vw;
-    display: inline-block;
-    width: 8vw;
-    line-height: 6vw;
-    text-align: center;
-    text-decoration: none;
-    color:cornsilk;
-    background-color:brown;
-    position: relative;
-  }
-  .ichiran_btn a::before {
-    border-right: 2px solid cornsilk;
-    border-top: 2px solid cornsilk;
-    bottom: 0;
-    content: "";
-    height: 1vw;
-    width: 1vw;
-    margin: auto;
-    position: absolute;
-    right: -0.5vw;
-    top: 0;
-    transform: rotate(45deg);
-    transition: right .3s;
-  }
-  .ichiran_btn a:hover::before {
-    right: -1.5vw;
-  }
+}
 
-#illust_text{
-    position: absolute;
+.flames{ /*イラストタイトル全体*/
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  height: 15vw;
+  padding: 7vw;
+  z-index: 2;
+}
+
+.flame{ /*イラストタイトル画像*/
+  width: 80%;
+  height: 15vw;
+}
+
+#illust_text{ /*イラストタイトルテキスト*/
+    position:absolute;
     color:cornsilk;
-    top: 13vw;
+    top:50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+    -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+    transform: translate(-50%,-50%);/*センター寄せの修正*/
     font-size:5vw;
     z-index: 4;
   }
+
+#mainiti_illust_text{ /*イラストタイトルテキスト*/
+    position:absolute;
+    color:cornsilk;
+    top:50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+    -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+    transform: translate(-50%,-50%);/*センター寄せの修正*/
+    font-size:4vw;
+    z-index: 4;
+  }
+
+#pictures{ /*画像とカーテンと額縁全体*/
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  padding-top: 5vw;
+  z-index: 1;
+}
+
+#picture{ /*画像*/
+  position: relative;
+  margin-top: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgray;
+  width: 43.5vw;
+  height: 43.5vw;
+  object-fit: contain;
+  z-index: 1;
+}
+
+#picture2{ /*画像*/
+  position: relative;
+  margin-top: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgray;
+  width: 43.5vw;
+  height: 43.5vw;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.gakubuti{ /*額縁*/
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#ka-ten{ /*カーテン*/
+    position: absolute;
+    left: -5%;
+    width: 110%;
+    height: 50vw;
+    z-index: 3;
+}
+#pictures_text{ /*テキストの背景*/
+  background-color: rgba(255 , 248 , 220 , 0.5);
+  border: 1px solid rgba(165, 42, 42, 0.5);
+  position: relative;
+  margin-top: 2vw;
+  width: 80%;
+  height: 14vw;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+#data{ /*日付*/
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+    font-size: 2vw;
+    text-decoration: underline;
+}
+#mainiti_num{ /*ナンバー*/
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+    font-size: 5vw;
+    text-decoration: underline;
+}
+#mainiti_text{
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vw;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+#comment{ /*コメント*/
+    position: relative;
+    padding-bottom: 3vw;
+    font-size: 2vw;
+}
 
   .fade{
     animation: fadeIn 1.3s ease 0.0s 1 normal;
@@ -112,59 +154,6 @@ html , body{
   @keyframes fadeIn {
     0% {opacity: 0}
     100% {opacity: 1}
-  }
-
-#menu{
-    position: fixed;
-    width: 8vw;
-    opacity: 0.75;
-    top: 1.5vw;
-    left: 2vw;
-    z-index: 6;
-}
-#sideBar{
-    position: fixed;
-    width: 0%;
-    top: 0%;
-    left: 0%;
-    height: 100vh;
-    background-color: white;
-    z-index: 5;
-  
-}
-.Link{
-    display: none;
-    position: relative;
-    left: 1vw;
-    text-decoration-line: none;
-    font-size: 2vw;
-    color: black;
-}
-#hoLink{
-    top: 8vw;
-}
-
-#seLink{
-   top: 12vw;
-}
-
-#geLink{
-    top: 16vw;
-}
-
-.menuOpen{
-    animation: menuOpen 1.0s ease 0.0s 1 normal;
-}
-.menuClose{
-    animation: menuClose 1.0s ease 0.0s 1 normal;
-}
-@keyframes menuOpen {
-    0% {width: 0%;}
-    100% {width: 20%;}
-  }
-  @keyframes menuClose {
-    0% {width: 20%;}
-    100% {width: 0%;}
   }
 
 
