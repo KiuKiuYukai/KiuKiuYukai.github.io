@@ -99,7 +99,7 @@ function drawImages()
       {
         ctx.drawImage(charactor, leftX, leftY , window.innerWidth / 20 , window.innerWidth / 20 * charactor.naturalHeight / charactor.naturalWidth);
       }
-    if(d == true && new Date - clearTime >= 2000)window.location.href = 'index.html';
+    if(d == true && new Date - clearTime >= 2000)window.location.href = 'home.html';
 }
 
 canvas.addEventListener('mousedown', (event) => {
