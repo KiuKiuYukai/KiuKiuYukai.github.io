@@ -1,11 +1,14 @@
 @charset "UTF-8";
+body{
+    font-family: 'Segoe Script','MS P明朝','MS PMincho',sans-serif;
+}
+
 .LinkCo{ /*遷移先全般*/
     text-align: center;
-    font-size: 32px;
     font-weight: bold;
     font-family: '游明朝体+36ポかな','YuMincho +36p Kana','Meiryo UI',sans-serif;
     color: #000;
-    margin: 16px;
+    margin: 1vw;
 }
 
 .header{ /*ヘッダー全般*/
@@ -13,7 +16,7 @@
 }
 
 .footer{ /*フッター全般*/
-    padding: 15px 10px;
+    padding: 1.5vw 1vw;
     text-align: right;
 }
 
@@ -23,14 +26,283 @@
     color: #000;
     text-align: center;
     vertical-align: top;
-    width: 180px;
-    border:2px solid #000;
-    margin: 0 auto 5px;
-    padding: 5px 0 10px;
+    width: 10vw;
+    border:0.2vw solid #000;
+    margin: 0 auto 1vw;
+    padding: 0.5vw 0 0.5vw;
 }
 
 .copy{ /*コピーライト*/
-    padding: 5px 5px;
+    padding: 0.5vw 0.5vw;
     font-size: 1.0rem;
     vertical-align: bottom;
 }
+
+#loadScene{ /*画像のロードが完了するまでの画面*/
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: cornsilk;
+  z-index: 99;
+}
+
+#menu{ /*メニューボタン*/
+    position: fixed;
+    filter:drop-shadow(5px 5px 5px #4e4e4e);
+    width: 8vw;
+    opacity: 0.75;
+    top: 1.5vw;
+    left: 2vw;
+    z-index: 100;
+}
+#sideBar{ /*メニューボタン押したときに開くサイドバーの背景*/
+    position: fixed;
+    width: 0%;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 10px 10px 15px -10px;
+    z-index: 99;
+  
+}
+.Link{ /*メニューリンク*/
+    display: none;
+    position: relative;
+    left: 1vw;
+    margin-left: 10%;
+    text-decoration-line: none;
+    font-size: 2vw;
+    color: black;
+    transition: 0.6s;
+}
+
+.Link:hover{
+    transform: scale(1.1);
+    color: blue;
+}
+
+/*以下リンクの位置を決める*/
+#Link1{
+    top: 8vw;
+}
+
+#Link2{
+   top: 12vw;
+}
+
+#Link3{
+    top: 16vw;
+}
+
+#Link4{
+    top: 20vw;
+}
+
+#Link5{
+    top: 24vw;
+}
+
+.breeding-rhombus-spinner {
+      height: 30vw;
+      width: 30vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      position: relative;
+
+      transform: rotate(45deg);
+    }
+
+    .breeding-rhombus-spinner, .breeding-rhombus-spinner * {
+      box-sizing: border-box;
+    }
+
+    .breeding-rhombus-spinner .rhombus {
+      height: calc(30vw / 7.5);
+      width: calc(30vw / 7.5);
+      animation-duration: 2000ms;
+      top: calc(30vw / 2.3077);
+      left: calc(30vw / 2.3077);
+      background-color: #ff1d5e;
+      position: absolute;
+      animation-iteration-count: infinite;
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(2n+0) {
+       margin-right: 0;
+     }
+
+    .breeding-rhombus-spinner .rhombus.child-1 {
+      animation-name: breeding-rhombus-spinner-animation-child-1;
+      animation-delay: calc(100ms * 1);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-2 {
+      animation-name: breeding-rhombus-spinner-animation-child-2;
+      animation-delay: calc(100ms * 2);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-3 {
+      animation-name: breeding-rhombus-spinner-animation-child-3;
+      animation-delay: calc(100ms * 3);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-4 {
+      animation-name: breeding-rhombus-spinner-animation-child-4;
+      animation-delay: calc(100ms * 4);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-5 {
+      animation-name: breeding-rhombus-spinner-animation-child-5;
+      animation-delay: calc(100ms * 5);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-6 {
+      animation-name: breeding-rhombus-spinner-animation-child-6;
+      animation-delay: calc(100ms * 6);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-7 {
+      animation-name: breeding-rhombus-spinner-animation-child-7;
+      animation-delay: calc(100ms * 7);
+    }
+
+    .breeding-rhombus-spinner .rhombus.child-8 {
+      animation-name: breeding-rhombus-spinner-animation-child-8;
+      animation-delay: calc(100ms * 8);
+    }
+
+    .breeding-rhombus-spinner .rhombus.big {
+      height: calc(30vw / 3);
+      width: calc(30vw / 3);
+      top: calc(30vw / 3);
+      left: calc(30vw / 3);
+      background-color: #ff1d5e;
+      animation: breeding-rhombus-spinner-animation-child-big 2s infinite;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-1 {
+      50% {
+        transform: translate(-325%, -325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-2 {
+      50% {
+        transform: translate(0, -325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-3 {
+      50% {
+        transform: translate(325%, -325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-4 {
+      50% {
+        transform: translate(325%, 0);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-5 {
+      50% {
+        transform: translate(325%, 325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-6 {
+      50% {
+        transform: translate(0, 325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-7 {
+      50% {
+        transform: translate(-325%, 325%);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-8 {
+      50% {
+        transform: translate(-325%, 0);
+      }
+    }
+
+    @keyframes breeding-rhombus-spinner-animation-child-big {
+      50% {
+        transform: scale(0.5);
+      }
+    }
+/*以下、標準的なボタンの表示*/
+
+.ichiran_btn {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    border-radius: 2vw;
+    display: inline-block;
+    width: 15vw;
+    line-height: 3vw;
+    text-align: center;
+    text-decoration: none;
+    color:cornsilk;
+    background-color:brown;
+    border: 3px solid black;
+    transition: 0.2s;
+  }
+
+  .ichiran_btn:hover
+  {
+    transform: scale(1.05);
+  }
+
+  .ichiran_btn a {
+    font-size: 1.5vw;
+    display: inline-block;
+    width: 8vw;
+    line-height: 6vw;
+    text-align: center;
+    text-decoration: none;
+    color:cornsilk;
+    background-color:brown;
+    position: relative;
+  }
+  .ichiran_btn a::before {
+    border-right: 2px solid cornsilk;
+    border-top: 2px solid cornsilk;
+    bottom: 0;
+    content: "";
+    height: 1vw;
+    width: 1vw;
+    margin: auto;
+    position: absolute;
+    right: -0.5vw;
+    top: 0;
+    transform: rotate(45deg);
+    transition: right .3s;
+  }
+  .ichiran_btn a:hover::before {
+    right: -1.5vw;
+  }
+
+/*以下メニューバーを開閉するときのアニメーション*/
+
+.menuOpen{
+    animation: menuOpen 1.0s ease 0.0s 1 normal;
+}
+.menuClose{
+    animation: menuClose 1.0s ease 0.0s 1 normal;
+}
+@keyframes menuOpen {
+    0% {width: 0%;}
+    100% {width: 20%;}
+  }
+  @keyframes menuClose {
+    0% {width: 20%;}
+    100% {width: 0%;}
+  }
+
