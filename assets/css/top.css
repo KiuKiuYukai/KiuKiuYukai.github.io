@@ -1,0 +1,39 @@
+@charset "UTF-8";
+.LinkCo{
+        width: 60vw;
+      }
+#LinkZi , #LinkIl , #LinkGa{
+        color: inherit;
+        position: relative;
+        transition: 0.2s;
+        font-size: 4vw;
+        text-decoration-line: none;
+}
+#LinkZi:hover::before,
+#LinkIl:hover::before,
+#LinkGa:hover::before 
+{
+    color: blue;
+    transform: scale(1.1);
+    text-decoration: underline;
+    content: '＞';
+}
+
+#LinkZi:hover,
+#LinkIl:hover,
+#LinkGa:hover 
+{
+    color: blue;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+#LinkZi:hover::after,
+#LinkIl:hover::after,
+#LinkGa:hover::after 
+{
+    color: blue;
+    transform: scale(1.1);
+    text-decoration: underline;
+    content: '＜';
+}

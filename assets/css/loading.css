@@ -1,0 +1,56 @@
+@charset "UTF-8";
+#gameOver{
+  z-index: 2;
+  position: absolute;
+  top:16vh;
+  left: 18vw;
+  width: 75%;
+}
+
+.ichiran_btn{
+  border: 3px solid cornsilk;
+  background-color: black;
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+.ichiran_btn a {
+  background-color: black;
+}
+
+#buttons{
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top:60%;
+  width: 100vw;
+  z-index: 3;
+}
+
+#kuro{
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#danmaku{
+  position: absolute;
+}
+
+.fade{
+  animation: fadeIn 1.0s ease 3.0s 1 normal;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+.fade2{
+  animation: fadeIn2 0.1s ease 3.0s 1 normal;
+}
+@keyframes fadeIn2 {
+  0% {opacity: 0}
+  100% {opacity: 0.3}
+}
