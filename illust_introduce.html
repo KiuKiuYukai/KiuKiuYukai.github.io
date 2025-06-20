@@ -12,25 +12,71 @@
         <link rel ="stylesheet" href="assets/css/illust_introduce.css">
         <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     </head>
-    <body>
-        <div id = illust>
-            <span id = "illust_text" class="fade">illustration</span>
-            <div id = "data">Num : 今が何枚目かを表示 Date : 制作した日付を表示</div>
-            <div id = "comment">一言コメント</div>
-            <img src="assets/img/1015843.png" id = "flame" class="fade">
-            <img src="assets/img/26365191.png" id = "gakubuti" class="fade">
-            <img src="assets/img/04カーテン開.png" id = "ka-ten" class="fade">
-            <img id = "picture" class="fade">
-            <div class="ichiran_btn">
-                <a href="illust_ichiran.html">一覧で見る</a>
-              </div>
+    <body oncontextmenu="return false;"onselectstart="return false;"onmousedown="return false;">
+        
+        <div id = "loadScene">
+            <div class="breeding-rhombus-spinner">
+                <div class="rhombus child-1"></div>
+                <div class="rhombus child-2"></div>
+                <div class="rhombus child-3"></div>
+                <div class="rhombus child-4"></div>
+                <div class="rhombus child-5"></div>
+                <div class="rhombus child-6"></div>
+                <div class="rhombus child-7"></div>
+                <div class="rhombus child-8"></div>
+                <div class="rhombus big"></div>
+            </div>
         </div>
-        <img src="assets/img/26297099.png" id = "menu">
-        <div id = "sideBar">
-            <a href="index.html" id = "hoLink" class="Link">ホームに戻る<br></a>
-            <a href="self_introduce.html" id = "seLink" class="Link">自己紹介<br></a>
-            <a href="" id = "geLink" class="Link">制作したゲーム<br></a>
-        </div>
+        <header>
+            <img src="assets/img/26297099.png" id = "menu">
+            <div id = "sideBar">
+                <a href="index.html" id = "Link1" class="Link">ホームに戻る<br></a>
+                <a href="self_introduce.html" id = "Link2" class="Link">自己紹介<br></a>
+                <a href="" id = "Link3" class="Link">制作したゲーム<br></a>
+                <a href="quiz.html" id = "Link4" class="Link">クイズ<br></a>
+            </div>
+        </header>
+        <main>
+            
+            <div id = "illust">
+                <div class = "flames">
+                    <img src="assets/img/1015843.png" class = "flame" class="fade">
+                    <span id = "illust_text" class="fade">illustration</span>
+                </div>
+                <div id = "pictures">
+                    <img src="assets/img/26365191.png" class = "gakubuti" class="fade">
+                    <img id = "ka-ten" class="fade">
+                    <img id = "picture" class="fade">
+                    <div id = "pictures_text">
+                        <div id = "data">Num : 今が何枚目かを表示 Date : 制作した日付を表示</div>
+                        <div id = "comment">一言コメント</div>
+                    </div>
+                </div>
+                <div class="ichiran_btn">
+                    <a href="illust_ichiran.html" onclick="illust_click()">一覧で見る</a>
+                </div>
+                <div class = "flames">
+                    <img src="assets/img/1015843.png" class = "flame" class="fade">
+                    <span id = "mainiti_illust_text" class="fade"></span>
+                    <div id = "mainiti_text">毎週月・水・金曜日更新！更新...したい...</div>
+                </div>
+                <div id = "pictures">
+                    <img src="assets/img/26365191.png" class = "gakubuti" class="fade">
+                    <img id = "picture2" class="fade">
+                    <div id = "pictures_text">
+                        <div id = "mainiti_num"></div>
+                    </div>
+                </div>
+                <div class="ichiran_btn">
+                    <a href="illust_ichiran.html" onclick="mainiti_click()">一覧で見る</a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p><a href="contact/index.html" class="btn">お問い合わせはこちら</a></p>
+            <p class = "copy"><small>&copy;花楼夢きう</small></p>
+        </footer>
+        <script src="assets/js/common.js" defer></script> 
         <script src="assets/js/illust_introduce.js" defer></script>     
     </body>
 </html>
